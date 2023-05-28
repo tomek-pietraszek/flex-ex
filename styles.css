@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    padding: 0 10%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.brand {
+    font-size: 1.3rem;
+}
+
+.icon {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.brand::before {
+    font: var(--fa-font-solid);
+    content: "\f028";
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+header {
+    position: relative;
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-link {
+    font-size: 1.3rem;
+}
+
+.nav-link:hover {
+    color: deeppink;
+}
+
+
+/* on click dropdown menu start */
+.dropdown-nav {
+    position: absolute;
+    right: 0;
+    top: 80px;
+    text-align: right;
+    display: none;
+}
+
+.dropdown-nav .nav-link {
+    display: block;
+}
+
+ input, label {
+  display: none;
+}
+
+.icon::before{
+    font: var(--fa-font-solid);
+    content: "\f0c9";
+    font-size: 2rem;
+}
+
+ #ham-menu:checked ~ .dropdown-nav {
+    display: block;
+}
+
+#ham-menu:checked +  .icon::before {
+    content: "\f00d";
+    font-size: 2rem;
+}
+/* on click dropdown menu end */
+
+.heading-section {
+    padding: 40px 0;
+}
+
+h1, p {
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+p {
+    font-size: 18px;
+}
+ 
+button {
+    background-color: black;
+    color: white;
+    padding: 15px 10px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button::after {
+    font: var(--fa-font-solid);
+    content: "\f04b";
+    margin-left: 10px;
+}
+
+button:hover{
+    background-color: rgb(58, 58, 58);
+}
+
+button:active{
+    box-shadow: 2px 2px 20px 5px inset  
+    rgba(239, 236, 236, 0.451);
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cards-section {
+    padding: 40px 0;
+    display: flex;
+    
+}
+
+.card {
+   
+    height: 600px;
+    flex-basis: 30%;
+    margin: 0 30px;
+    flex-grow: 1;
+    padding: 110px 100px 0 50px ;
+    font-size: 1.7rem;
+    color: white;
+}
+
+.card h4 {
+    margin-bottom: 60px;
+    font-weight: 500;
+    text-shadow: 5px 0px 30px rgb(0, 0, 0);
+}
+
+.card:nth-child(1) {
+    margin-left: 0;
+    background: url(/images/white-box.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.card:nth-child(2) {
+    background: url(/images/room.jpg) no-repeat left;
+    background-size: cover;
+}
+
+.card:nth-child(3) {
+    margin-right: 0;
+    background: url(/images/black-white.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.fa-arrow-right {
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 10px 
+    rgba(212, 212, 212, 0.451);
+    color: black;
+    background-color: white;
+    font-size: 1rem;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.fa-arrow-right:active {
+   box-shadow: 0px 0px 0px 5px
+    rgba(212, 212, 212, 0.451);
+}
+
+
+footer {
+    margin-top: 200px;
+    padding: 40px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+
+@media (max-width: 1749px) {
+    
+    .card {
+        padding-right: 60px;
+    }
+}
+
+@media (max-width: 1365px) {
+    
+    .card {
+        font-size: 1.5rem;
+        padding-left: 20px;
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 967px) {
+
+    nav {
+        display: none;
+    }
+
+    label {
+        display: inline;
+    }
+
+    .heading-section {
+        padding-top: 60px;
+    }
+
+    .text-container {
+       text-align: center;
+    }
+
+    .cards-section {
+        flex-direction: column;
+    }
+
+    .button-container {
+        justify-content: center;
+    } 
+
+    .card {
+        flex-basis: auto;
+        margin: 20px 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: center; 
+        padding-right: 20px;   
+        padding-top: 150px;    
+    }
+
+    .fa-arrow-right {
+        margin-left: 20px;
+    }
+
+    footer {
+        margin: 30px;
+        font-size: 1.2rem;
+    }
+}
