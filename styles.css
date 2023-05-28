@@ -160,18 +160,18 @@ button:active{
 
 .card:nth-child(1) {
     
-    background: url(./images/3.jpg) no-repeat center;
+    background: url(/Assets/images/3.jpg) no-repeat center;
     background-size: cover;
 }
 
 .card:nth-child(2) {
-    background: url(./images/2.jpg) no-repeat left;
+    background: url(/Assets/images/2.jpg) no-repeat left;
     background-size: cover;
 }
 
 .card:nth-child(3) {
   
-    background: url(./images/1.jpg) no-repeat center;
+    background: url(/Assets/images/1.jpg) no-repeat center;
     background-size: cover;
 }
 
